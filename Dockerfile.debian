@@ -1,0 +1,7 @@
+FROM debian:latest
+
+LABEL maintainer="antony@vennard.ch"
+
+RUN apt-get update && apt-get install -y make clang-tidy
+
+CMD /bin/bash

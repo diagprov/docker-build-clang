@@ -1,0 +1,7 @@
+FROM registry.fedoraproject.org/fedora-minimal:31
+
+LABEL maintainer="antony@vennard.ch"
+
+RUN microdnf install -y make glibc-headers glibc-devel clang llvm clang-tools-extra && microdnf clean all -y
+
+CMD /bin/bash
